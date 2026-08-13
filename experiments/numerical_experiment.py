@@ -1,7 +1,7 @@
 """
 Numerical experiment for the stochastic optimal control model.
 
-The script reproduces the main numerical results from Chapter 6:
+The script implements the numerical experiment described in Chapter 6:
 - deterministic switching points;
 - baseline Monte Carlo experiment;
 - influence of noise correlation;
@@ -239,11 +239,14 @@ def control(t, tau, theta, theta_bar):
 def sde_step(x1, x2, u1, u2, sigma1, sigma2, rho, rng):
     F = production(x1, x2)
 
-    dW1 = np.sqrt(DT) * rng.normal()
+    xi1 = rng.normal()
+    xi2 = rng.normal()
+
+    dW1 = np.sqrt(DT) * xi1
 
     dW2 = np.sqrt(DT) * (
-        rho * rng.normal()
-        + np.sqrt(1 - rho**2) * rng.normal()
+            rho * xi1
+            + np.sqrt(1 - rho ** 2) * xi2
     )
 
     dx1 = (
