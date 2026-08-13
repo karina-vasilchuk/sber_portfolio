@@ -50,7 +50,7 @@ $$
 \right),
 $$
 
-where xi1 and xi2 are independent standard normal variables.
+where the innovations are independent standard normal variables.
 
 ## Numerical experiment
 
