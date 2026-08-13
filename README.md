@@ -6,11 +6,11 @@ The project focuses on the numerical analysis of switching times, stochastic tra
 
 ## Model
 
-The system contains two state variables, \(x_1(t)\) and \(x_2(t)\), with Cobb-Douglas production function
+The system contains two state variables, $x_1(t)$ and $x_2(t)$, with Cobb-Douglas production function
 
-\[
+$$
 F(x_1, x_2) = x_1^{\varepsilon_1} x_2^{\varepsilon_2}.
-\]
+$$
 
 The optimal control consists of four regimes:
 
@@ -21,17 +21,11 @@ The optimal control consists of four regimes:
 
 The deterministic switching times used in the numerical experiment are
 
-\[
-\tau^{(0)} = 0.394764,
-\]
-
-\[
-\theta^{(0)} = 1.105905,
-\]
-
-\[
+$$
+\tau^{(0)} = 0.394764,\qquad
+\theta^{(0)} = 1.105905,\qquad
 \bar{\theta}^{(0)} = 2.001445.
-\]
+$$
 
 The stochastic dynamics are simulated using the Euler-Maruyama method.
 
